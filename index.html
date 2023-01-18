@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>message = <span id="message"></span></div>
+    <button onclick="callRemote()">click</button>
+    <script>
+        const callRemote = async () => {
+            const url = new URL("http://localhost:8000")
+            fetch(url,{mode:"cors",})
+            .then(async res=>await res.json())
+            .then(json=>{
+                const span = document.getElementById("message")
+                span.textContent = json.message
+            })
+        }
+    </script>
+</body>
+</html>

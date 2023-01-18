@@ -5,7 +5,7 @@
   // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
   "dockerFile": "Dockerfile",
 
-  "extensions": ["ms-python.python"]
+  "extensions": ["ms-python.python","ms-vscode.live-server"]
 
   // Features to add to the dev container. More info: https://containers.dev/features.
   // "features": {},
